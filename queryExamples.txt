@@ -1,0 +1,67 @@
+query Query {
+  getAllPokemon {
+    results {
+      name
+      url
+    }
+  }
+}
+
+
+query Query($idName: String!) {
+  getPokemonByIdName(idName: $idName) {
+    id
+    name
+    height
+    weight
+  }
+}
+{
+  "idName": "beedrill"
+}
+
+query Query($idsNames: String!) {
+  getAllPokemonByIdsNames(idsNames: $idsNames) {
+    id
+    name
+    height
+    weight
+  }
+}
+{
+  "idsNames": "6,5 ,  3 "
+}
+
+query Query($idsNames: String!) {
+  getPokemonsHeight(idsNames: $idsNames) {
+    pokemons {
+      name
+      height
+      weight
+    }
+    count
+    mean
+    median
+    mode
+  }
+}
+{
+  "idsNames": "4, 5"
+}
+
+query Query($idsNames: String!) {
+  getPokemonsWeight(idsNames: $idsNames) {
+    pokemons {
+      id
+      name
+      weight
+    }
+    count
+    mean
+    median
+    mode
+  }
+}
+{
+  "idsNames": "21, 23, 37, 55, 66, 77"
+}
