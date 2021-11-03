@@ -3,7 +3,7 @@
 ## Description
 This application is using the [PokeApi](https://pokeapi.co/) and implements GraphQL.
 
-## Instal
+## Install
   - clone repo
   - navigate to `poke-graphql`
   - install dependencies `npm i`
